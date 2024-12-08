@@ -1,0 +1,34 @@
+import Image from "next/image";
+import React from "react";
+
+const BrandLogos = () => {
+  // Array of logo paths and alt text
+  const logos = [
+    { src: "/company-logos-images/zapier.png", alt: "Zapier" },
+    { src: "/company-logos-images/pipedrive.png", alt: "Pipedrive" },
+    { src: "/company-logos-images/cib-bank.png", alt: "CIB Bank" },
+    { src: "/company-logos-images/z-image.png", alt: "Seven" },
+    { src: "/company-logos-images/burnt-toast.png", alt: "Burnt Toast" },
+    { src: "/company-logos-images/panadoc.png", alt: "PandaDoc" },
+    { src: "/company-logos-images/moz.png", alt: "Moz" },
+  ];
+
+  return (
+    <div className="bg-white py-8 w-[80%]">
+      <div className=" flex items-center justify-between gap-6">
+        {logos.map((logo, index) => (
+          <Image
+            key={index}
+            src={logo.src}
+            alt={logo.alt}
+            width={100}
+            height={100}
+            className="object-contain"
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default BrandLogos;
