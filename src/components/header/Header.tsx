@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import LogoSection from './logoSection'
 import NavigationBtn from './navigationBtn'
 import logo from '../../../public/Logo.png';
@@ -15,6 +16,19 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Header = () => {
+
+  const [isOpen, setIsOpen] = useState(false)
+
+  // Function to toggle the sheet visibility
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
+  // Function to close the menu when a link is clicked
+  const closeMenu = () => {
+    setIsOpen(false)
+  }
+
   return (
     <div className='w-screen flex flex-col border-b items-center justify-center overflow-x-hidden'>
       <div className='bg-[#F0F2F3] w-screen hidden lg:flex flex-col items-center justify-center'>
@@ -24,7 +38,7 @@ const Header = () => {
         <NavigationBtn />
       </div>
 
-      <Sheet>
+      <Sheet open={isOpen} onOpenChange={toggleMenu}>
         <SheetTrigger className='block lg:hidden w-[80%] py-3 md:py-6'>
           <div className='flex items-center justify-between w-full'>
             <div className="flex items-center gap-2">
@@ -46,7 +60,7 @@ const Header = () => {
         <SheetContent className='w-full'>
           <SheetHeader>
             <SheetTitle><LogoSection /> <hr /></SheetTitle>
-            <SheetDescription>
+            <SheetDescription onClick={closeMenu} >
               <NavigationBtn />
             </SheetDescription>
           </SheetHeader>
