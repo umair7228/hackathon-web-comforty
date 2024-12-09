@@ -3,28 +3,27 @@ import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const OurProducts: React.FC = () => {
+const ShopList: React.FC = () => {
 
   return (
-    <div className="container w-[80%] mt-32 overflow-x-hidden">
+    <div className="container mt-12 w-[80%] overflow-x-hidden">
       {/* Section Title */}
-      <h2 className="text-3xl text-center font-semibold mb-6">Our Products</h2>
+      <h2 className="text-3xl font-semibold mb-6">Shop Now</h2>
 
       {/* Product Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-14 gap-x-6 mt-14">
-        {products
-        .slice(1, 9)
-        .map((product) => (
-          <Link 
-          href={`/products/${product.id}`}
-          key={product.id} className="relative">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-14 mt-8">
+      {products
+          .slice() // Creates a copy of the products array to avoid mutating the original
+          .reverse()
+          .map((product) => (
+          <Link href={`/products/${product.id}`} key={product.id} className="relative">
             {/* Product Image */}
             <Image
               src={product.image}
               alt={product.name}
               width={312}
               height={312}
-              className="rounded-md h-60 xl:h-72 2xl:h-80 w-full object-cover"
+              className="rounded-md w-full h-60 xl:h-80 object-cover"
             />
 
             {/* Product Badges */}
@@ -62,4 +61,4 @@ const OurProducts: React.FC = () => {
   );
 };
 
-export default OurProducts;
+export default ShopList;

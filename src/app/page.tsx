@@ -6,7 +6,7 @@ import OurProducts from "@/components/home/our-products/OurProducts";
 
 export default function Home() {
   return (
-    <main className="w-screen flex flex-col items-center justify-center">
+    <main className="w-screen flex flex-col items-center justify-center overflow-x-hidden">
       <HomePage />
       <BrandLogos />
       <FeaturedProducts />

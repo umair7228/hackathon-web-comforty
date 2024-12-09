@@ -3,7 +3,7 @@ import React from 'react'
 
 const Licence = () => {
   return (
-    <div className='w-screen mt-10 border-t border-gray-300 flex items-center justify-center'>
+    <div className='w-screen mt-10 border-t border-gray-300 flex items-center justify-center  overflow-x-hidden'>
       <div className="w-[80%] py-6 flex flex-col md:flex-row items-center justify-between">
           <p className="text-gray-600 text-sm">
             © 2024 – Blogy – Designed & Developed by <span className="font-semibold">Umair Nawaz</span>

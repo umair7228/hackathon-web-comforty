@@ -21,8 +21,8 @@ const Subscription: React.FC = () => {
       <div className="w-[80%] ">
         {/* Newsletter Section */}
         <div className="text-center mb-16">
-            <h2 className="text-4xl tracking-wide font-semibold mb-6">Or Subscribe To The Newsletter</h2>
-            <div className="flex justify-center items-end gap-6 max-w-xl mx-auto bg-gray-100 rounded-md overflow-hidden">
+            <h2 className=" text-xl md:text-3xl lg:text-4xl tracking-wide font-semibold mb-6">Or Subscribe To The Newsletter</h2>
+            <div className="flex flex-col md:flex-row justify-center items-center md:items-end gap-6 max-w-sm md:max-w-md lg:max-w-xl mx-auto bg-gray-100 rounded-md overflow-hidden">
             <input
                 type="email"
                 placeholder="Email Address..."
@@ -36,8 +36,8 @@ const Subscription: React.FC = () => {
 
         {/* Instagram Section */}
         <div className="text-center">
-            <h2 className="text-4xl font-semibold mb-6">Follow Products And Discounts On Instagram</h2>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 px-4">
+            <h2 className=" text-xl md:text-3xl lg:text-4xl font-semibold mb-6">Follow Products And Discounts On Instagram</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 px-4">
             {instagramImages.map((img) => (
                 <div
                 key={img.id}
@@ -48,7 +48,7 @@ const Subscription: React.FC = () => {
                     alt={img.name}
                     width={150}
                     height={150}
-                    className="object-cover w-full h-52"
+                    className="object-cover w-full h-44 md:h-52"
                 />
                 </div>
             ))}

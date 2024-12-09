@@ -14,8 +14,8 @@ const BrandLogos = () => {
   ];
 
   return (
-    <div className="bg-white py-8 w-[80%]">
-      <div className=" flex items-center justify-between gap-6">
+    <div className="bg-white py-8 w-[90%] sm:w-[85%] lg:w-[80%] overflow-x-hidden">
+      <div className="flex flex-wrap items-center justify-center sm:justify-evenly gap-4 sm:gap-6">
         {logos.map((logo, index) => (
           <Image
             key={index}

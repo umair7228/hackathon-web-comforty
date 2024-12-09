@@ -3,7 +3,7 @@ import React from 'react'
 
 const contact = () => {
   return (
-    <main>
+    <main className='overflow-x-hidden'>
       <Contact />
     </main>
   )

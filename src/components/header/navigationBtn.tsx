@@ -5,8 +5,8 @@ import Link from 'next/link'
 
 const NavigationBtn = () => {
   return (
-    <nav className='w-[80%] h-20 flex items-center justify-between'>
-      <div className='flex items-center gap-8'>
+    <nav className='w-full md:w-[80%] lg:h-12 xl:h-20 flex items-center justify-center lg:justify-between  overflow-x-hidden'>
+      <div className='flex flex-col lg:flex-row items-center gap-8'>
         <Link
         href={'/'}>
             <Button variant={'link'} className='p-0'>
@@ -15,7 +15,7 @@ const NavigationBtn = () => {
         </Link>
 
         <Link
-        href={'/products'}>
+        href={'/shop'}>
             <Button variant={'link'} className='p-0'>
                 Shop
             </Button>
@@ -43,7 +43,7 @@ const NavigationBtn = () => {
         </Link>
       </div>
 
-      <div className='flex items-center justify-center gap-2'>
+      <div className='hidden lg:flex items-center justify-center gap-2'>
         <h3 className='text-[#636270]'>Contact:</h3>
         <p>(92) 32123494</p>
       </div>

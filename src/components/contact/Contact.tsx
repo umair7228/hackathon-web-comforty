@@ -8,10 +8,10 @@ import {
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center px-4 py-12 md:px-16 lg:px-32">
+    <div className="flex flex-col items-center px-4 pt-12 md:px-16 lg:px-32">
       {/* Header */} 
       <div className="text-center">
-        <h1 className="text-4xl font-semibold md:text-3xl lg:text-4xl">
+        <h1 className="font-semibold text-2xl md:text-3xl lg:text-4xl">
           Get In Touch With Us
         </h1>
         <p className="mt-2 text-base text-[#9F9F9F]">
@@ -27,18 +27,18 @@ const Contact = () => {
         <div className="flex flex-col gap-12">
           {/* Address */}
           <div className="flex items-start gap-4">
-            <MapPin className="text-primary h-8 w-8" />
+            <MapPin className="text-primary w-6 h-6 md:h-8 md:w-8" />
             <div className="space-y-1">
-              <h3 className="font-medium text-2xl">Address</h3>
+              <h3 className="font-medium text-xl md:text-2xl">Address</h3>
               <p>936 5th SE Avenue, <br /> New York NY10000, United States</p>
             </div>
           </div>
 
           {/* Phone */}
           <div className="flex items-start gap-4">
-            <Phone className="text-primary h-8 w-8" />
+            <Phone className="text-primary w-6 h-6 md:h-8 md:w-8" />
             <div className="space-y-1">
-              <h3 className="font-medium text-2xl">Phone</h3>
+              <h3 className="font-medium text-xl md:text-2xl">Phone</h3>
               <p>Mobile: (+84) 546-6789</p>
               <p>Hotline: (+84) 456-6789</p>
             </div>
@@ -46,9 +46,9 @@ const Contact = () => {
 
           {/* Working Time */}
           <div className="flex items-start gap-4">
-            <Clock className="text-primary h-8 w-8" />
+            <Clock className="text-primary w-6 h-6 md:h-8 md:w-8" />
             <div className="space-y-1">
-              <h3 className="font-medium text-2xl">Working Time</h3>
+              <h3 className="font-medium text-xl md:text-2xl">Working Time</h3>
               <p>Monday-Friday: 9:00 - 22:00</p>
               <p>Saturday-Sunday: 9:00 - 21:00</p>
             </div>
@@ -56,8 +56,8 @@ const Contact = () => {
         </div>
 
         {/* Right Section */}
-        <form className="flex flex-col w-full md:w-1/2 space-y-4">
-          <div className="flex flex-col w-96">
+        <form className="flex flex-col w-full md:w-1/2 space-y-4 mt-14 md:mt-0">
+          <div className="flex flex-col lg:w-96">
             <label htmlFor="name" className="text-sm font-medium">
               Your name
             </label>

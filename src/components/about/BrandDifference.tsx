@@ -30,15 +30,15 @@ const BrandDifference = () => {
   ];
 
   return (
-    <div className="w-[80%] mx-auto mt-24">
-      <h2 className=" text-3xl font-bold mb-8">
+    <div className="w-[80%] mx-auto mt-8 md:mt-12 lg:mt-16 xl:mt-24">
+      <h2 className="text-xl md:text-2xl lg:text-3xl text-center md:text-start font-bold mb-8">
         What Makes Our Brand Different
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-[#F9F9F9] rounded-md p-8 text-center hover:shadow-lg"
+            className="bg-[#F9F9F9] rounded-md p-4 lg:p-6 xl:p-8 flex flex-col items-center xl:items-start text-center hover:shadow-lg"
           >
             <div className="mb-4">{feature.icon}</div>
             <h3 className="font-semibold tracking-wide text-lg text-[#007580] mb-2">{feature.title}</h3>

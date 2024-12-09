@@ -5,7 +5,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <main>
+    <main className='overflow-x-hidden'>
       <HeroSection />
       <BrandDifference />
       <PopularProducts />

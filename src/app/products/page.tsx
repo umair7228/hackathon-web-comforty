@@ -4,7 +4,7 @@ import React from 'react'
 
 const products = () => {
   return (
-    <main className='w-screen flex flex-col items-center justify-center'>
+    <main className='w-screen flex flex-col items-center justify-center overflow-x-hidden'>
       <ProductsList />
       <Subscription />
     </main>

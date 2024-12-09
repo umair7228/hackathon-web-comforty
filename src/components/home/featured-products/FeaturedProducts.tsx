@@ -1,39 +1,29 @@
+import { products } from '@/app/data';
 import { ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
-type Product = {
-  id: number;
-  name: string;
-  price: number;
-  oldPrice?: number;
-  isNew?: boolean;
-  isOnSale?: boolean;
-  image: string;
-};
 
 const FeaturedProducts: React.FC = () => {
-  const products: Product[] = [
-    { id: 1, name: 'Library Stool Chair', price: 20, isNew: true, image: '/home-images/featured-products/1.jpeg' },
-    { id: 2, name: 'Library Stool Chair', price: 20, oldPrice: 30, isOnSale: true, image: '/home-images/featured-products/2.jpeg' },
-    { id: 3, name: 'Library Stool Chair', price: 20, image: '/home-images/featured-products/3.jpeg' },
-    { id: 4, name: 'Library Stool Chair', price: 20, image: '/home-images/featured-products/4.jpeg' },
-  ];
 
   return (
-    <div className="container mt-12">
-      <h2 className="text-3xl font-bold mb-6">Featured Products</h2>
+    <div className="container w-[80%]  mt-12 overflow-x-hidden">
+      <h2 className="text-2xl md:text-3xl font-bold mb-6">Featured Products</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
-        {products.map((product) => (
-          <div
+        {products
+        .slice(1, 5)
+        .map((product) => (
+          <Link
+            href={`/products/${product.id}`}
             key={product.id}
-            className="relative"
+            className="md:col-span-2 lg:col-span-1 relative lg:w-[18.5vw] xl:w-[19vw]"
           >
             <Image
               src={product.image}
               alt={product.name}
               width={312}
               height={312}
-              className="rounded-md w-[19vw] h-80"
+              className="rounded-md w-full h-80 lg:h-64 xl:h-80"
             />
             {product.isNew && (
               <span className="absolute top-4 left-4 bg-green-500 text-white text-xs px-2 py-1 rounded">
@@ -56,9 +46,9 @@ const FeaturedProducts: React.FC = () => {
               className="absolute bottom-2 right-2 bg-teal-500 text-white p-2 rounded-lg hover:bg-teal-600"
               aria-label={`Add ${product.name} to cart`}
             >
-              <ShoppingCart />
+              <ShoppingCart className='w-5 h-5 xl:h-6 xl:w-6' />
             </button>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
