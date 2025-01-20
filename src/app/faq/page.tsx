@@ -18,7 +18,7 @@ const FAQs = () => {
   ];
 
   return (
-    <div className="container mx-auto my-16 w-[80%]">
+    <div className="container mx-auto my-16 max-w-screen-2xl w-[80%]">
       {/* Title Section */}
       <div className="text-center mb-12">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">Questions Looks Here</h2>

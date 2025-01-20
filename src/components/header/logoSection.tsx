@@ -6,7 +6,7 @@ import { ShoppingCart } from 'lucide-react';
 
 const LogoSection = () => {
   return (
-    <header className="w-full lg:w-[80%] mt-4 md:mt-0 py-6 lg:py-4 xl:py-6 flex flex-row items-center justify-between overflow-x-hidden">
+    <header className="w-full lg:w-[80%]  max-w-screen-2xl mt-4 md:mt-0 py-6 lg:py-4 xl:py-6 flex flex-row items-center justify-between overflow-x-hidden">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Link href={'/'}>

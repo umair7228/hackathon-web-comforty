@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const TopCategories = () => {
   return (
-    <section className="w-[80%] mx-auto mt-28 overflow-x-hidden">
+    <section className=" max-w-screen-2xl w-[80%] mx-auto mt-28 overflow-x-hidden">
       {/* Section Title */}
       <h2 className="text-3xl font-bold mb-6">
         Top Categories

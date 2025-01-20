@@ -30,7 +30,7 @@ const BrandDifference = () => {
   ];
 
   return (
-    <div className="w-[80%] mx-auto mt-8 md:mt-12 lg:mt-16 xl:mt-24">
+    <div className="w-[80%] max-w-screen-2xl mx-auto mt-8 md:mt-12 lg:mt-16 xl:mt-24">
       <h2 className="text-xl md:text-2xl lg:text-3xl text-center md:text-start font-bold mb-8">
         What Makes Our Brand Different
       </h2>

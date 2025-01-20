@@ -8,7 +8,7 @@ import {
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center px-4 pt-12 md:px-16 lg:px-32">
+    <div className="flex flex-col items-center max-w-screen-2xl px-4 pt-12 md:px-16 lg:px-32">
       {/* Header */} 
       <div className="text-center">
         <h1 className="font-semibold text-2xl md:text-3xl lg:text-4xl">

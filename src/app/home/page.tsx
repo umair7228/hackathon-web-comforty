@@ -8,7 +8,7 @@ import Link from "next/link";
 const HomePage = () => {
   return (
     <section className="bg-[#F5F7FA] w-[90%] sm:w-[85%] lg:w-[80%] min-h-screen flex items-center justify-center px-12 overflow-x-hidden">
-      <div className="w-full flex flex-col lg:flex-row items-center lg:justify-between gap-16 lg:gap-6">
+      <div className="max-w-screen-2xl w-full flex flex-col lg:flex-row items-center lg:justify-between gap-16 lg:gap-6">
         {/* Left Section */}
         <div className="lg:max-w-[50%] text-center flex flex-col items-center justify-center lg:items-start lg:justify-start lg:text-left">
           <p className="text-sm text-[#555555] tracking-wide uppercase mb-2 md:mb-4">

@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-[80%] h-full mx-auto py-12">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-screen-2xl w-[80%] h-full mx-auto py-12">
       {/* Left - About Text */}
-      <div className="bg-teal-700 text-white p-6 md:p-10 xl:p-16 2xl:p-20 flex flex-col justify-between rounded-md h-[40vh] md:h-[35vh] lg:h-[60vh]">
+      <div className="bg-teal-700 text-white p-6 md:p-10 xl:p-16 2xl:p-20 flex flex-col justify-between rounded-md ">
         <div>
           <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4">About Us - Comforty</h2>
           <p className="text-xs md:text-sm xl:text-lg tracking-wider leading-4 md:leading-7 font-normal mb-6">
@@ -21,7 +21,7 @@ const HeroSection = () => {
       </div>
 
       {/* Right - Image */}
-      <div className="relative h-[40vh] md:h-[35vh] lg:h-[60vh] w-full rounded-md overflow-hidden">
+      <div className="relative w-full rounded-md overflow-hidden">
         <Image
           src="/home-images/our-products/1.jpeg"
           alt="Comforty chair"

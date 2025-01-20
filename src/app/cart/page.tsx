@@ -26,7 +26,7 @@ const Cart = () => {
   ];
 
   return (
-    <div className="w-[80%] mx-auto mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className=" max-w-screen-2xl w-[80%] mx-auto mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
       {/* Bag Section */}
       <div className="col-span-2">
         <h2 className="text-2xl font-bold mb-6">Bag</h2>

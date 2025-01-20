@@ -1,3 +1,5 @@
+import { client } from "@/sanity/lib/client";
+
 export type Product1 = {
   id: number;
   name: string;
@@ -53,3 +55,52 @@ export const products: Product1[] = [
       { id: 12, name: "Library Stool Chair", price: 20, description: "Perfect for any room, blending comfort with design.", image: "/home-images/our-products/3.jpeg" },
     ];
     
+
+
+
+
+
+
+export interface Product {
+  _id: string;
+  title: string;
+  price: number;
+  priceWithoutDiscount?: number;
+  badge?: string;
+  image: {
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+  };
+  category: {
+    _type: string;
+    title: string;
+  };
+  description: string;
+  inventory: number;
+  tags: string[];
+}
+
+export const fetchProducts = async (): Promise<Product[]> => {
+  const query = `*[_type == "products"] {
+    _id,
+    title,
+    price,
+    priceWithoutDiscount,
+    badge,
+    "imageUrl": image.asset->url,
+    "category": category->title,
+    description,
+    inventory,
+    tags
+  }`;
+
+  try {
+    const products = await client.fetch(query);
+    return products;
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    return [];
+  }
+};

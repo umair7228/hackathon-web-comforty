@@ -6,7 +6,7 @@ import Link from "next/link";
 const Headline = () => {
   return (
     <div className="w-screen hidden lg:flex items-center justify-center bg-[#1A1932] px-4 overflow-x-hidden">
-      <div className="h-11 w-full sm:w-[90%] md:w-[80%] text-white text-xs sm:text-sm flex flex-col sm:flex-row items-center justify-between">
+      <div className="h-11 w-full max-w-screen-2xl sm:w-[90%] md:w-[80%] text-white text-xs sm:text-sm flex flex-col sm:flex-row items-center justify-between">
         {/* Left Section */}
         <div className="flex items-center space-x-2">
           <Check className="w-4 h-4" />

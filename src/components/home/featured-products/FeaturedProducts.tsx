@@ -7,7 +7,7 @@ import Link from 'next/link';
 const FeaturedProducts: React.FC = () => {
 
   return (
-    <div className="container w-[80%]  mt-12 overflow-x-hidden">
+    <div className="container max-w-screen-2xl w-[80%]  mt-12 overflow-x-hidden">
       <h2 className="text-2xl md:text-3xl font-bold mb-6">Featured Products</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
         {products

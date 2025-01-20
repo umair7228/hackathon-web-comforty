@@ -6,7 +6,7 @@ import Link from "next/link";
 const ShopList: React.FC = () => {
 
   return (
-    <div className="container mt-12 w-[80%] overflow-x-hidden">
+    <div className="container mt-12 max-w-screen-2xl w-[80%] overflow-x-hidden">
       {/* Section Title */}
       <h2 className="text-3xl font-semibold mb-6">Shop Now</h2>
 

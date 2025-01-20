@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="mt-24 lg:mt-36 flex flex-col items-center border-t justify-center overflow-x-hidden">
         
-      <div className="container w-[80%]  px-4 mt-12 lg:mt-20">
+      <div className="container max-w-screen-2xl w-[80%]  px-4 mt-12 lg:mt-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div>

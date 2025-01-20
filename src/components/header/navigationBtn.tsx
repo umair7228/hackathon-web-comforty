@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const NavigationBtn = () => {
   return (
-    <nav className='w-full md:w-[80%] lg:h-12 xl:h-20 flex items-center justify-center lg:justify-between  overflow-x-hidden'>
+    <nav className='w-full max-w-screen-2xl md:w-[80%] lg:h-12 xl:h-20 flex items-center justify-center lg:justify-between  overflow-x-hidden'>
       <div className='flex flex-col lg:flex-row items-center gap-8'>
         <Link
         href={'/'}>

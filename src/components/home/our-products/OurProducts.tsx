@@ -6,7 +6,7 @@ import Link from "next/link";
 const OurProducts: React.FC = () => {
 
   return (
-    <div className="container w-[80%] mt-32 overflow-x-hidden">
+    <div className="container max-w-screen-2xl w-[80%] mt-32 overflow-x-hidden">
       {/* Section Title */}
       <h2 className="text-3xl text-center font-semibold mb-6">Our Products</h2>
 

@@ -17,7 +17,7 @@ const Subscription: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-100 py-12 w-full mt-36 -mb-36 flex items-center justify-center">
+    <div className="bg-gray-100  max-w-screen-2xl py-12 w-full mt-36 -mb-36 flex items-center justify-center">
       <div className="w-[80%] ">
         {/* Newsletter Section */}
         <div className="text-center mb-16">
