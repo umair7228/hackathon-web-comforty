@@ -1,9 +1,24 @@
-import { products } from "@/app/data";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { products } from "../products/ProductsList";
 
-const ShopList: React.FC = () => {
+type Product = {
+  _id: string;
+  title: string;
+  price: number;
+  priceWithoutDiscount?: number;
+  badge?: string;
+  imageUrl?: string; // Updated to use the resolved image URL directly
+  description: string;
+  tags?: string[];
+  category?: {
+    _id: string;
+    title: string;
+  };
+};
+
+const ShopList = async () => {
 
   return (
     <div className="container mt-12 max-w-screen-2xl w-[80%] overflow-x-hidden">
@@ -16,41 +31,39 @@ const ShopList: React.FC = () => {
           .slice() // Creates a copy of the products array to avoid mutating the original
           .reverse()
           .map((product) => (
-          <Link href={`/products/${product.id}`} key={product.id} className="relative">
+          <Link href={`/products/${product._id}`} key={product._id} className="relative">
             {/* Product Image */}
             <Image
-              src={product.image}
-              alt={product.name}
+              src={product.imageUrl || "/placeholder.png"}
+              alt={product.title}
               width={312}
               height={312}
               className="rounded-md w-full h-60 xl:h-80 object-cover"
             />
 
             {/* Product Badges */}
-            {product.isNew && (
+            {product.badge && (
               <span className="absolute top-4 left-4 bg-green-500 text-white text-xs px-2 py-1 rounded">
-                New
-              </span>
-            )}
-            {product.isOnSale && (
-              <span className="absolute top-4 left-4 bg-orange-500 text-white text-xs px-2 py-1 rounded">
-                Sales
+                {product.badge}
               </span>
             )}
 
             {/* Product Details */}
-            <h3 className="mt-4 font-medium text-base text-[#272343]">{product.name}</h3>
+            <h3 className="mt-4 font-medium text-base text-[#272343]">{product.title}</h3>
+            <p className="text-sm text-gray-600 mt-1">{product.description}</p>
             <div className="flex items-center space-x-2 mt-2">
               <span className="text-lg font-bold">${product.price}</span>
-              {product.oldPrice && (
-                <span className="text-sm line-through text-gray-500">${product.oldPrice}</span>
+              {product.priceWithoutDiscount && (
+                <span className="text-sm line-through text-gray-500">
+                  ${product.priceWithoutDiscount}
+                </span>
               )}
             </div>
 
             {/* Add to Cart Button */}
             <button
               className="absolute bottom-2 right-2 bg-teal-500 text-white p-2 rounded-lg hover:bg-teal-600"
-              aria-label={`Add ${product.name} to cart`}
+              aria-label={`Add ${product.title} to cart`}
             >
               <ShoppingCart />
             </button>

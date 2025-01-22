@@ -1,4 +1,4 @@
-import ShopList from '@/components/shop/ProductsList'
+import ShopList from '@/components/shop/ShopingList'
 import React from 'react'
 
 const Shop = () => {

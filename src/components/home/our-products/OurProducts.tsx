@@ -1,4 +1,4 @@
-import { products } from "@/app/data";
+import { products } from "@/components/products/ProductsList";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,42 +16,37 @@ const OurProducts: React.FC = () => {
         .slice(1, 9)
         .map((product) => (
           <Link 
-          href={`/products/${product.id}`}
-          key={product.id} className="relative">
+          href={`/products/${product._id}`}
+          key={product._id} className="relative">
             {/* Product Image */}
             <Image
-              src={product.image}
-              alt={product.name}
+              src={product.imageUrl || "/placeholder.png"}
+              alt={product.title}
               width={312}
               height={312}
-              className="rounded-md h-60 xl:h-72 2xl:h-80 w-full object-cover"
+              className=" h-60 xl:h-72 2xl:h-80 w-full object-cover"
             />
 
             {/* Product Badges */}
-            {product.isNew && (
+            {product.badge && (
               <span className="absolute top-4 left-4 bg-green-500 text-white text-xs px-2 py-1 rounded">
-                New
-              </span>
-            )}
-            {product.isOnSale && (
-              <span className="absolute top-4 left-4 bg-orange-500 text-white text-xs px-2 py-1 rounded">
-                Sales
+                {product.badge}
               </span>
             )}
 
             {/* Product Details */}
-            <h3 className="mt-4 font-medium text-base text-[#272343]">{product.name}</h3>
+            <h3 className="mt-4 font-medium text-base text-[#272343]">{product.title}</h3>
             <div className="flex items-center space-x-2 mt-2">
               <span className="text-lg font-bold">${product.price}</span>
-              {product.oldPrice && (
-                <span className="text-sm line-through text-gray-500">${product.oldPrice}</span>
+              {product.price && (
+                <span className="text-sm line-through text-gray-500">${product.price}</span>
               )}
             </div>
 
             {/* Add to Cart Button */}
             <button
               className="absolute bottom-2 right-2 bg-teal-500 text-white p-2 rounded-lg hover:bg-teal-600"
-              aria-label={`Add ${product.name} to cart`}
+              aria-label={`Add ${product.title} to cart`}
             >
               <ShoppingCart />
             </button>
